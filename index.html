@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Coding Tutor</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Header -->
+        <header class="text-center mb-4">
+            <h1>Adaptive Coding Tutor</h1>
+            <p>Get coding challenges, write your solution, and improve your skills!</p>
+        </header>
+
+        <!-- Chat Interface -->
+        <section id="chat-section" class="mb-4">
+            <div id="chat-display" class="p-3 bg-light border rounded mb-3" style="max-height: 400px; overflow-y: auto;"></div>
+            <div id="chat-input" class="input-group">
+                <textarea id="user-prompt" class="form-control" placeholder="Enter your message..."></textarea>
+                <button id="send-message-btn" class="btn btn-success ms-2">Send</button>
+            </div>
+        </section>
+
+        <!-- Coding editor -->
+        <section id="editor-section" class="mb-4">
+            <label for="code-editor" class="form-label">Write your code:</label>
+            <div id="code-editor" class="border rounded" style="height: 300px;"></div>
+        </section>
+
+        <!-- Submit and feedback section -->
+        <section id="feedback-section" class="p-4 bg-light border rounded">
+            <button id="submit-btn" class="btn btn-primary mb-3">Submit</button>
+            <div id="feedback" class="p-3 bg-white border rounded" style="max-height: 250px; overflow-y: auto;"></div>
+        </section>
+
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.js"></script>
+        <script src="{{ url_for('static', filename='editor.js') }}"></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
