@@ -29,9 +29,8 @@ The **Adaptive Coding Tutor** is an AI-powered platform designed to help users i
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python, Flask (or Django if applicable)
-- **AI Model**: Large Language Model (e.g., OpenAI GPT)
-- **Editor**: Integrated code editor
+- **Backend**: Python, Flask 
+- **AI Model**: Gemini 1.5 Flash
 
 ## Project Structure
 
